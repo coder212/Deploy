@@ -1,0 +1,29 @@
+<%= form_for(@datum) do |f| %>
+  <% if @datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@datum.errors.count, "error") %> prohibited this datum from being saved:</h2>
+
+      <ul>
+      <% @datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :No %><br />
+    <%= f.text_field :No %>
+  </div>
+  <div class="field">
+    <%= f.label :Barcode %><br />
+    <%= f.text_field :Barcode %>
+  </div>
+  <div class="field">
+    <%= f.label :Quantity %><br />
+    <%= f.number_field :Quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

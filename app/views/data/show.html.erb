@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>No:</b>
+  <%= @datum.No %>
+</p>
+
+<p>
+  <b>Barcode:</b>
+  <%= @datum.Barcode %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @datum.Quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_datum_path(@datum) %> |
+<%= link_to 'Back', data_path %>
